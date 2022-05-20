@@ -6,6 +6,7 @@ import Accueil from './components/Accueil';
 import logo from './assets/terre.png';
 import Specialites from './components/Specialites';
 import Vision from './components/Vision';
+import Tarif from './components/Tarif';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         <Accueil />
         <Specialites />
         <Vision />
+        <Tarif />
       </div>
     </BrowserRouter>
   );
