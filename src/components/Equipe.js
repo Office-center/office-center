@@ -4,6 +4,7 @@ const Equipe = () => {
     return (
         <div>
             
+            
         </div>
     )
 }

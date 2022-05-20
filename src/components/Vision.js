@@ -24,7 +24,6 @@ const Vision = () => {
                             Un emplacement exceptionnel au cœur de Lille :
                         </div>
                         <ul className="list-disc text-sm">
-                            <li>16-18 rue Faidherbe – 59000 LILLE</li>
                             <li>250 mètres de la gare Lille Flandres, du métro et des bus</li>
                             <li>600 mètres de la gare Lille Europe</li>
                             <li>30 minutes maximum de tous les centres économiques de l’Agglomération lilloise</li>

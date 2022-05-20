@@ -6,6 +6,7 @@ import Accueil from './components/Accueil';
 import logo from './assets/terre.png';
 import Specialites from './components/Specialites';
 import Vision from './components/Vision';
+import Adresse from './components/Adresse';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
 
           <div class="flex justify-start items-center">
             <Link to="/" className="pr-4">
-              <img src={logo} className="sm:mr-12 md:mr-2 h-12 w-12 " />
+              <img src={logo}  className="sm:mr-12 md:mr-2 h-12 w-12 " />
             </Link>
             <h4 className='text-white text-2xl'>OfficeCenter</h4>
           </div>
@@ -55,6 +56,7 @@ function App() {
         <Accueil />
         <Specialites />
         <Vision />
+        <Adresse />
       </div>
     </BrowserRouter>
   );
