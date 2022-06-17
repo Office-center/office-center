@@ -1,7 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
+import {AiOutlineArrowDown} from "react-icons/ai"
+import styled from "styled-components";
+import TarifList from "./TarifList";
 
-const data = [
+const allData = [
     {
         title: "Domiciliation simple",
         subtitle: "Le service de domiciliation simple que nous proposons comprends:",
@@ -21,45 +25,70 @@ const data = [
         prix: "Prix 35€ HT/mois",
     },
     {
-        title: "Domiciliation simple",
-        subtitle: "Le service de domiciliation simple que nous proposons comprends:",
-        list: ["Une Adresse en plein centre de Lille (rue Faidherbe)", "Une boite aux lettres", "La mise à disposition du courrier"],
-        prix: "Le tout pour 25€ HT/mois",
+        title: "",
+        subtitle: "",
+        list: [],
+        prix: "",
     },
 ];
 
 const Tarif = () => {
 
-    const slideLeft = () => {
-        var slider = document.getElementById('slider');
-        slider.scrollLeft = slider.scrollLeft - 575;
-    };
+    const [data, setData] = useState({
+        title: "Domiciliation",
+        subtitle: "Le service de domiciliation simple que nous proposons comprends:",
+        list: ["Une Adresse en plein centre de Lille (rue Faidherbe)", "Une boite aux lettres", "La mise à disposition du courrier"],
+        prix: "25€ HT/mois",
+    })
 
-    const slideRight = () => {
-        var slider = document.getElementById('slider');
-        slider.scrollLeft = slider.scrollLeft + 575;
-    };
+    const [active, setActive] = useState("1");
+
+    const list = (index) => {
+        setData(allData[index])
+    }
+
+    const handleClick = (event) => {
+        setActive(event.currentTarget.id);
+    }
 
     return (
-        <div className='relative flex items-center py-20 scrollbar-hide bg-secondaire flex-col'>
-            <h1 className="text-white text-2xl pb-4">Nos Tarifs</h1>
-            <hr className="w-10 pb-12" />
-            <div className="flex md:flex-row sm:flex-col items-center justify-center max-w-[740px]">
-                <MdChevronLeft className='opacity-70 cursor-pointer hover:opacity-100 bg-principal rounded-full ml-12' onClick={slideLeft} size={40} style={{ color: "#ffffff" }} />
-                <div id='slider' className='md:w-full md:h-full md:overflow-x-scroll sm:overflow-y-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
-                    {data.map((item) => (
-                        <div className='w-full items-center justify-center inline-block cursor-pointer hover:scale-105 ease-in-out duration-300 h-full'>
-                            <h1 className="text-white text-center">{item.title}</h1>
-                            <h1 className="text-white text-center pb-8">{item.subtitle}</h1>
-                            <ul className='list-disc'>
-                                <li className="text-white text-center">{item.list[0]}</li>
-                                <li className="text-white text-center">{item.list[1]}</li>
-                            </ul>
-                            <p className="text-white text-center">{item.prix}</p>
+        <div className='flex items-center py-10 flex-col mt-12' id='tarif'>
+            <h1 className="bg-black-500 pb-4 text-center font-bold text-3xl text-gray-900">Nos tarifs</h1>
+            <div className="grid md:grid-cols-2 gap-10 w-2/3 px-28 py-12 rounded-xl">
+                <div className="flex flex-col justify-center items-center w-12/12">
+                    <button onClick={function(event){ handleClick(event); list(0);}} key={1} id="1" className={active === "1" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white"}>
+                        <div className="flex flex-row justify-between w-full">
+                            <h1 className="text-left">Domiciliation simple</h1>
+                            <h1 className="text-grey-900">25€ HT /mois</h1>
                         </div>
-                    ))}
+                    </button>
+
+                    <button onClick={function(event){ handleClick(event); list(1);}} key={2} id="2" className={active === "2" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white"}>
+                        <div className="flex flex-row justify-between w-full">
+                            <h1 className="text-left">Domiciliation avec réexpédition</h1>
+                            <h1 className="text-grey-900">30€ HT /mois</h1>
+                        </div>
+                    </button>
+
+                    <button onClick={function(event){ handleClick(event); list(2);}} key={3} id="3" className={active === "3" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white"}>
+                        <div className="flex flex-row justify-between w-full">
+                            <h1 className="text-left">Domiciliation avec retranscription</h1>
+                            <h1 className="text-grey-900">35€ HT /mois</h1>
+                        </div>
+                    </button>
+
+                    <button onClick={function(event){ handleClick(event); list(3);}} key={4} id="4" className={active === "4" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white"}>
+                        <div className="flex flex-row justify-between w-full">
+                            <h1 className="text-left">0ption</h1>
+                            <h1 className="text-grey-900">5€ HT /mois</h1>
+                        </div>
+                    </button>
                 </div>
-                <MdChevronRight className='opacity-70 cursor-pointer hover:opacity-100 bg-principal rounded-full mr-12' onClick={slideRight} size={40} style={{ color: "#ffffff" }} />
+                <TarifList data={data} />
+            </div>
+            <div className="flex justify-center flex-col text-white p-4 rounded-xl items-center">
+                <h1 className="text-principal">Contactez-nous</h1>
+                <AiOutlineArrowDown size={20} className="text-principal"/>
             </div>
         </div>
     );

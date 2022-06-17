@@ -6,14 +6,19 @@ module.exports = {
     extend: {
       colors: {
         'principal': '#282B35',
-        'secondaire': '#5FAEC4'
+        'secondaire': '#5FAEC4',
+        'office': '#574c50',
+        'accueil': '#F4F3F0',
       },
+      backgroundImage: {
+        'contact': "url('/src/assets/bg-contact.jpg')",
+      }
     },
     screens: {
       'sm': '300px',
       // => @media (min-width: 300px) { ... }
 
-      'md': '768px',
+      'md': '1050px',
       // => @media (min-width: 768px) { ... }
 
       'lg': '1024px',
