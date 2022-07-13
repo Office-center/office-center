@@ -6,7 +6,7 @@ import { MdLocalPostOffice } from 'react-icons/md';
 
 const Specialites = () => {
     return (
-        <div className="h-auto px-4 text-black sm:py-28 flex justify-center items-center mt-[-13rem] overflow-hidden" id="specialites">
+        <div className="h-auto px-4 text-black sm:py-28 flex justify-center items-center mt-[-22rem] overflow-hidden" id="specialites">
             <div className="h-auto bg-white grid md:grid-cols-3 rounded-[30px] drop-shadow-xl w-3/4">
                 <div className="border-gray-300 md:border-r-2 md:items-center md:justify-center flex -flex-col p-8">
                     <h1 className="text-sm text-center font-bold text-secondaire">NOS SPÉCIALITÉS</h1>

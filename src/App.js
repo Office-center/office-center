@@ -9,7 +9,6 @@ import Vision from './components/Vision';
 import Tarif from './components/Tarif';
 import Contact from './components/Contact';
 
-
 function App() {
 
   const [nav, setNav] = useState(false);
@@ -34,23 +33,23 @@ function App() {
             <Link to="#accueil" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-white' smooth>Accueil</Link>
             <Link to="#specialites" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-white' smooth>Spécialités</Link>
             <Link to="#vision" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-white' smooth>Vision</Link>
-            <Link to="#contact" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-white' smooth>Contact</Link>
             <Link to="#adresse" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-white' smooth> Adresse</Link>
             <Link to="#tarif" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-white' smooth>Tarifs</Link>
+            <Link to="#contact" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-white' smooth>Contact</Link>
           </ul>
           <div onClick={handleNav} className='md:hidden cursor-pointer p-4 flex flex-row items-end justify-end w-full'>
             <div className=''>
               {nav ? <AiOutlineClose size={20}  className="text-white"/> : <AiOutlineMenu size={20} className="text-white"/>}
             </div>
           </div>
-          <ul className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-100 bg-white ease-in-out duration-300' : 'ease-in-out duration-300 fixed left-[-100%] top-[-10%]'} id="sidebar">
+          <ul className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r bor der-r-gray-100 bg-white ease-in-out duration-300' : 'ease-in-out duration-300 fixed left-[-100%] top-[-10%]'} id="sidebar">
             <div className='flex flex-col'>
               <Link to="#accueil" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300' smooth>Accueil</Link>
               <Link to="#specialites" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300' smooth>Spécialités</Link>
               <Link to="#vision" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300' smooth>Vision</Link>
-              <Link to="#contact" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300' smooth>Contact</Link>
               <Link to="#adresse" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300' smooth>Adresse</Link>
               <Link to="#tarif" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300' smooth>Tarifs</Link>
+              <Link to="#contact" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300' smooth>Contact</Link> 
             </div>
           </ul>
         </div>
@@ -63,7 +62,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
-
 
 export default App;
