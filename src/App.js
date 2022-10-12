@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import Accueil from './components/Accueil';
-import logo from './assets/terre.png';
+import logo from './assets/terre.jpg';
 import Specialites from './components/Specialites';
 import Vision from './components/Vision';
 import Tarif from './components/Tarif';
@@ -20,13 +20,13 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <div className='z-50 w-full py-2 flex justify-around fixed bg-principal h-auto'>
+        <div className='z-50 w-full py-2 flex justify-around fixed bg-principal h-auto p-8'>
 
           <div class="flex justify-start items-center">
             <Link to="/" className="pr-4">
-              <img src={logo} className="sm:mr-12 md:mr-2 h-12 w-12 " />
+              <img src={logo} className="sm:mr-12 md:mr-2 h-24 w-24 rounded-full" />
             </Link>
-            <h4 className='text-white text-2xl'>OfficeCenter</h4>
+            <h4 className='text-white text-2xl'>Work Union</h4>
           </div>
 
           <ul className='hidden md:flex items-center'>

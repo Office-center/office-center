@@ -15,7 +15,7 @@ const Accueil = () => {
                         {/* <div className="md:w-3/12 md:z-10 md:ml-[-8rem]"> */}
                         <div className="flex justify-center flex-col items-center md:z-10 bg-office p-4 rounded-2xl  md:ml-[-8rem]">
                             <h1 className="text-secondaire pb-4">Rejoignez nous !</h1>
-                            <h1 className="font-bold text-5xl pb-10 text-white text-center">Office center</h1>
+                            <h1 className="font-bold text-5xl pb-10 text-white text-center">Work Union</h1>
                         </div>
                     </div>
                     <div className="flex justify-end md:mt-[-9rem]">
