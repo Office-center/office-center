@@ -55,7 +55,7 @@ const Contact = () => {
                         <div className="w-full p-3">
                             <textarea className="h-[200px] w-full p-4 text-sm font-light text-left placeholder-gray-500 resize-none outline-none border-b-2 border-gray-200 focus:border-secondaire" placeholder="Message" name="Message"  onChange={handleChange}/>
                         </div>
-                        <input type="submit" className="p-2 w-1/3 ml-3 mt-2 rounded-full text-sm text-center text-white bg-principal hover:bg-white hover:text-principal duration-300 cursor-pointer" />
+                        <input type="submit" className="p-2 w-1/3 ml-3 mt-2 rounded-full text-sm text-center text-white bg-principal hover:bg-white hover:text-principal duration-300 cursor-pointer" value="Envoyé" />
                     </form>
                 </div>
             </div>
