@@ -9,6 +9,7 @@ module.exports = {
         'secondaire': '#5FAEC4',
         'office': '#574c50',
         'accueil': '#F4F3F0',
+        'cardcolor': '#00B4D8',
       },
       backgroundImage: {
         'contact': "url('/src/assets/bg-contact.jpg')",

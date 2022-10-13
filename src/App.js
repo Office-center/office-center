@@ -8,6 +8,7 @@ import Specialites from './components/Specialites';
 import Vision from './components/Vision';
 import Tarif from './components/Tarif';
 import Contact from './components/Contact';
+import { MetaTags } from 'react-meta-tags';
 
 function App() {
 
@@ -20,11 +21,11 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <div className='z-50 w-full py-2 flex justify-around fixed bg-principal h-auto p-8'>
+        <header aria-label='barre de navigation' className='z-50 w-full py-2 flex justify-around fixed bg-principal h-auto p-8'>
 
           <div class="flex justify-start items-center">
             <Link to="/" className="pr-4">
-              <img src={logo} className="sm:mr-12 md:mr-2 h-24 w-24 rounded-full" />
+              <img src={logo} alt="cette image représente le logo de l'agence WorkUnion" className="sm:mr-12 md:mr-2 h-24 w-24 rounded-full" />
             </Link>
             <h4 className='text-white text-2xl'>Work Union</h4>
           </div>
@@ -52,7 +53,7 @@ function App() {
               <Link to="#contact" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300' smooth>Contact</Link> 
             </div>
           </ul>
-        </div>
+        </header>
         <Accueil />
         <Specialites />
         <Vision />
