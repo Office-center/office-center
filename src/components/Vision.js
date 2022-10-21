@@ -6,7 +6,7 @@ import image3 from '../assets/image3.jpeg'
 const Vision = () => {
     return (
         <section aria-label="section comprenant différents tarifs liés à la domiciliation" className="flex flex-col justify-center items-center bg-accueil py-12">
-            <h1 className="bg-black-500 pb-4 text-center font-bold text-3xl">Quelle est notre Vision ?</h1>
+            <h1 className="bg-black-500 pb-4 text-center font-bold text-3xl">Quelle est notre vision chez WorkUnion?</h1>
             <p className="max-w-[1240px] pb-10 w-auto text-black text-center px-28 text-sm">
                 Office Center est une société nouvelle qui développe un concept original de centre d'affaires associant la domiciliation d'entreprise, la location de bureaux et le coworking dans un cadre de partage d'expérience et avec un rapport coût/service lowcost.
                 Office Center a pour objectif d'accompagner l'entreprise à sa création et durant les différentes étapes de son développement .

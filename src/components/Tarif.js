@@ -54,7 +54,7 @@ const Tarif = () => {
     return (
         <div className='flex items-center py-10 flex-col mt-12' id='tarif'>
             <h1 className="bg-black-500 pb-4 text-center font-bold text-3xl text-gray-900">Nos tarifs</h1>
-            <div className="grid md:grid-cols-2 gap-10 w-2/3 px-28 py-12 rounded-xl">
+            <div className="grid md:grid-cols-2 gap-10 px-28 py-12 rounded-xl justify-center items-center">
                 <div className="flex flex-col justify-center items-center w-12/12">
                     <button onClick={function(event){ handleClick(event); list(0);}} key={1} id="1" className={active === "1" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white"}>
                         <div className="flex flex-row justify-between w-full">

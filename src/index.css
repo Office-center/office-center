@@ -2,11 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-.carousel {
-    display: inline-flex;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+
+  }
+  
+  .slide {
+    display: inline-block;
+    object-fit: cover;
+  
+    height: 760px;
+    width: 100%;
+  }
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #6a0dad;
+  }
+  

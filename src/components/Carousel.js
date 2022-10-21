@@ -4,72 +4,61 @@ import images2 from '../assets/images2.jpg'
 import images3 from '../assets/images3.jpg'
 
 const images = [images1, images2, images3]
+const delay = 4000;
 
 const Carousel = () => {
-    const [currentImage, setCurrentImage] = useState(0);
 
-    const refs = images.reduce((acc, val, i) => {
-        acc[i] = createRef();
-        return acc;
-    }, {});
-
-    const scrollToImage = i => {
-        setCurrentImage(i);
-        refs[i].current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest',
-            inline: 'start',
-        });
-    };
-
-    const totalImages = images.length;
-
-    const nextImage = () => {
-        if (currentImage >= totalImages - 1) {
-            scrollToImage(0);
-        } else {
-            scrollToImage(currentImage + 1);
-        }
-    };
-
-    const previousImage = () => {
-        if (currentImage === 0) {
-            scrollToImage(totalImages - 1);
-        } else {
-            scrollToImage(currentImage - 1);
-        }
-    };
-
-    const arrowStyle = 'absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center';
-
-    const sliderControl = isLeft => (
-        <button
-            type="button"
-            onClick={isLeft ? previousImage : nextImage}
-            className={`${arrowStyle} ${isLeft ? 'left-2' : 'right-2'}`}
-            style={{ top: '45%' }}
-        >
-            <span role="img" aria-label={`Arrow ${isLeft ? 'left' : 'right'}`}>
-                {isLeft ? '◀' : '▶'}
-            </span>
-        </button>
-    );
-
+    const [index, setIndex] = useState(0);
+    const timeoutRef = useRef(null);
+  
+    function resetTimeout() {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    }
+  
+    useEffect(() => {
+      resetTimeout();
+      timeoutRef.current = setTimeout(
+        () =>
+          setIndex((prevIndex) =>
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+          ),
+        delay
+      );
+  
+      return () => {
+        resetTimeout();
+      };
+    }, [index]);
+  
     return (
-        // <div className="flex justify-center w-screen md:w-7/12 items-center">
-        <div className="flex justify-center w-screen md:w-12/12 items-center">
-            <div className="relative w-full">
-                <div className="carousel">
-                    {sliderControl(true)}
-                    {images.map((img, i) => (
-                        <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
-                            <img alt="ces images représentent des personnes qui travaillent enssemble" src={img} className="w-full object-cover h-5/6 " />
-                        </div>
-                    ))}
-                    {sliderControl()}
-                </div>
-            </div>
+      <div className="slideshow">
+        <div
+          className="slideshowSlider"
+          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+        >
+          {images.map((backgroundColor, index) => (
+            <img
+              className="slide"
+              key={index}
+              src={backgroundColor}
+            ></img>
+          ))}
         </div>
+
+        <div className="slideshowDots">
+          {images.map((_, idx) => (
+            <div
+              key={idx}
+              className={`slideshowDot${index === idx ? " active" : ""}`}
+              onClick={() => {
+                setIndex(idx);
+              }}
+            ></div>
+          ))}
+        </div>
+      </div>
     );
 };
 
