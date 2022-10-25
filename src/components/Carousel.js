@@ -4,7 +4,7 @@ import images2 from '../assets/images2.jpg'
 import images3 from '../assets/images3.jpg'
 
 const images = [images1, images2, images3]
-const delay = 4000;
+const delay = 6000;
 
 const Carousel = () => {
 

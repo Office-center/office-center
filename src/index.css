@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .slideshow {
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
   }
   
