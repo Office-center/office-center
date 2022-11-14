@@ -5,11 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'principal': '#282B35',
+        'principal': '#6290c3',
         'secondaire': '#5FAEC4',
         'office': '#574c50',
         'accueil': '#F4F3F0',
         'cardcolor': '#00B4D8',
+        'secondairecard': '#9FA4AD',
+        'titresecondaire' : '#6B7280',
+        'error': '#F37878',
       },
       backgroundImage: {
         'contact': "url('/src/assets/bg-contact.jpg')",
@@ -18,6 +21,8 @@ module.exports = {
     screens: {
       'sm': '300px',
       // => @media (min-width: 300px) { ... }
+
+      'ms' : '576px',
 
       'md': '1050px',
       // => @media (min-width: 768px) { ... }

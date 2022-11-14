@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import "utils/design";
+
+@import "bases/variables", "bases/html";
+
+@import "components/btn";
+
+@import "components/card";
+
+@import "layouts/footer";
+
+@import "layouts/header";

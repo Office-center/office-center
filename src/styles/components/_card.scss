@@ -1,0 +1,13 @@
+.card {
+
+  &-tarif {
+    background-color: $secondaire;
+  }
+
+  &-item {
+
+    &:last-of-type {
+        border: 0;
+    }
+  }
+}
