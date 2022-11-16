@@ -13,7 +13,6 @@ module.exports = {
         'secondairecard': '#9FA4AD',
         'error': '#F37878',
         'footerbg': '#282B35',
-
       },
       backgroundImage: {
         'contact': "url('/src/assets/contact.jpg')",
