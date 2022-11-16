@@ -1,5 +1,9 @@
 .card {
 
+  &-spe {
+    color: $secondaire;
+  }
+
   &-tarif {
     background-color: $secondaire;
   }

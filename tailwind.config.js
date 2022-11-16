@@ -5,17 +5,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'principal': '#6290c3',
-        'secondaire': '#5FAEC4',
+        'principal': '#63D471',
+        'secondaire': '#0F4F49',
         'office': '#574c50',
         'accueil': '#F4F3F0',
         'cardcolor': '#00B4D8',
         'secondairecard': '#9FA4AD',
-        'titresecondaire' : '#6B7280',
         'error': '#F37878',
+        'footerbg': '#282B35',
+
       },
       backgroundImage: {
-        'contact': "url('/src/assets/bg-contact.jpg')",
+        'contact': "url('/src/assets/contact.jpg')",
       }
     },
     screens: {
