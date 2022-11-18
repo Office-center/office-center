@@ -10,16 +10,12 @@ const Contact = () => {
     const [formValue, setFormValue] = useState(initialValue);
     const [formErr, setFormErr] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
-
-    // console.log(initialValue);
-
     const success = () => toast.success("Message envoyé !");
     const error = () => toast.error("Erreur lors de l'envoi du message.");
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormValue({ ...formValue, [name]: value })
-        console.log(name);
     }
 
     const handleSubmit = (e) => {
@@ -54,7 +50,6 @@ const Contact = () => {
     const validate = (values) => {
         const errors = {};
         const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-        console.log(values);
         if (!values.Nom) {
             errors.name = "Nom requis";
         }
@@ -80,7 +75,7 @@ const Contact = () => {
                 </div>
                 <div className="rounded-xl flex justify-center">
                     <form method="POST" action="https://getform.io/f/9c292022-0df0-4366-aeb8-3f4fbaa9922c" className="p-4 w-10/12 bg-white rounded-2xl shadow-lg max-w-2xl" id="contact" onSubmit={handleSubmit}>
-                        <h2 className="font-bold text-3xl p-4 text-center text-secondaire">Envoyer un message</h2>
+                        <h2 className="text-3xl p-4 text-center text-secondaire">Envoyer un message</h2>
                         <div className="flex flex-col p-3">
                             <input aria-label="Entrer votre nom" aria-required="true" className="h-10 p-4 text-sm font-light placeholder-titresecondaire outline-none border-b-2 border-gray-300 focus:border-principal" placeholder="Nom*" type="text" name="Nom" onChange={handleChange} />
                             <p className="text-error text-xs ml-4 mt-1">{formErr.name}</p>

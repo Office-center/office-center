@@ -47,7 +47,7 @@ const Vision = () => {
 
     return (
         <section aria-label="section comprenant différents tarifs liés à la domiciliation" className="flex flex-col justify-center items-center bg-secondaire py-12">
-            <h2 className="bg-black-500 pb-4 text-center font-bold text-3xl text-white">Quelle est notre vision chez WorkUnion?</h2>
+            <h2 className="bg-black-500 pb-4 text-center text-3xl text-white">Quelle est notre vision chez WorkUnion?</h2>
             <p className="max-w-[800px] pb-10 w-auto text-white text-center sm:px-5 text-sm">
                 WorkUnion est une société nouvelle qui développe un concept original de centre d'affaires associant la domiciliation d'entreprise, la location de bureaux et le coworking dans un cadre de partage d'expérience et avec un rapport coût/service lowcost.
                 WorkUnion a pour objectif d'accompagner l'entreprise à sa création et durant les différentes étapes de son développement .
@@ -59,7 +59,7 @@ const Vision = () => {
                 <div className="max-w-sm overflow-hidden shadow-lg shadow-slate-400 shadow-principal rounded-[10px] bg-white" key={id}>
                     <img className="object-cover h-48 w-96 bg-principal" src={imgSrc} alt={imgAlt} />
                     <div className="px-6 py-4">
-                        <div className="font-bold text-base mb-2 text-center">
+                        <div className="text-base mb-2 text-center">
                             {title}
                         </div>
                         <ul className="list-disc text-sm list-outside text-left">
@@ -70,6 +70,7 @@ const Vision = () => {
                     </div>
                 </div>
                 )}
+                <div id="tarif"></div>
             </div>
         </section>
     )

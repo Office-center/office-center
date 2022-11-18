@@ -33,7 +33,7 @@ const Specialites = () => {
                     <div key={id} className="flex flex-row h-auto w-auto p-4 items-start md:border-r-2 border-gray-300 bg-white card-item">
                         <div className="flex flex-col h-auto justify-start p-4 card-spe">{icon}</div>
                         <div className="flex flex-col p-4 text-left">
-                            <h2 className="text-sm font-bold pb-4 text-secondaire">{title}</h2>
+                            <h2 className="text-sm pb-4 text-secondaire">{title}</h2>
                             <p className="text-xs text-secondairecard">{text}</p>
                         </div>
                     </div>

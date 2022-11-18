@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {AiOutlineArrowDown} from "react-icons/ai"
+import { HashLink as Link } from 'react-router-hash-link';
 import TarifList from "./TarifList";
 
 const allData = [
@@ -49,8 +50,8 @@ const Tarif = () => {
     }
 
     return (
-        <div className='flex items-center py-10 flex-col mt-12'>
-            <h2 className="pb-4 text-center font-bold text-3xl text-secondaire">Nos tarifs</h2>
+        <div className='flex items-center pt-10 flex-col mt-12'>
+            <h2 className="pb-4 text-center text-3xl text-secondaire">Nos tarifs</h2>
             <div className="grid md:grid-cols-2 gap-10 py-12 rounded-xl justify-center items-center">
                 <div className="flex flex-col justify-center items-center w-12/12">
                     <button onClick={function(event){ handleClick(event); list(0);}} key={1} id="1" className={active === "1" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl mb-2" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white mb-2"}>
@@ -84,10 +85,8 @@ const Tarif = () => {
                 <TarifList data={data} />
             </div>
             <div className="flex justify-center flex-col text-white p-4 rounded-xl items-center animate-bounce">
-                <a href="#contact" className="flex items-center flex-col">
-                <h4 className="text-principal">Contactez-nous</h4>
+                <Link to="#contact" smooth><h4 className="text-principal">Contactez-nous</h4></Link>
                 <AiOutlineArrowDown size={20} className="text-principal"/>
-                </a>
             </div>
         </div>
     );

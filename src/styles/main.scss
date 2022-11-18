@@ -6,11 +6,11 @@
 
 @tailwind utilities;
 
-@import "utils/design";
+@import "utils/design", "utils/typography";
 
 @import "bases/variables", "bases/html";
 
-@import "components/btn";
+@import "components/btn", "components/promo", "components/title";
 
 @import "components/card";
 

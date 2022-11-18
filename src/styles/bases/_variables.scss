@@ -5,6 +5,7 @@ $breakpoints: (
   t-xs: 768px,
   t-s: 800px,
   t: 992px,
+  l: 1050px,
   t-xl: 1024px,
   d-xs: 1200px,
   d: 1440px,
@@ -22,3 +23,27 @@ $white: #fff;
 $black: #000;
 $light: #ddd;
 $light-opacity: rgba(255, 255, 255, 0.6);
+
+$primary-font-regular: "LinLibertine-Regular";
+$primary-font-regular-path: "../../fonts/LibreBaskerville-Regular.ttf";
+
+$primary-font-bold: "LinLibertine-Bold";
+$primary-font-bold-path: "../../fonts/LibreBaskerville-Bold.ttf";
+
+$primary-font-italic: "LinLibertine-Italic";
+$primary-font-italic-path: "../../fonts/LibreBaskerville-Italic.ttf";
+
+@font-face {
+  font-family: $primary-font-regular;
+  src: url($primary-font-regular-path) format("truetype");
+}
+
+@font-face {
+  font-family: $primary-font-bold;
+  src: url($primary-font-bold-path) format("truetype");
+}
+
+@font-face {
+  font-family: $primary-font-italic;
+  src: url($primary-font-italic-path) format("truetype");
+}

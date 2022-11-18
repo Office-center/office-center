@@ -12,7 +12,7 @@ module.exports = {
         'cardcolor': '#00B4D8',
         'secondairecard': '#9FA4AD',
         'error': '#F37878',
-        'footerbg': '#282B35',
+        'title': '#283618',
       },
       backgroundImage: {
         'contact': "url('/src/assets/contact.jpg')",
