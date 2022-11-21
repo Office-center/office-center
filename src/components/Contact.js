@@ -67,6 +67,8 @@ const Contact = () => {
     
 
     return (
+        <>
+        <div className="py-[14px]"></div>
         <section aria-label="formulaire de contact" className="bg-accueil h-auto w-full py-12 bg-contact bg-cover" id="contact">
             <div className="grid md:grid-cols-2 gap-8 w-full">
                 <div> 
@@ -107,6 +109,7 @@ const Contact = () => {
                 </div>
             </div>
         </section>
+        </>
     )
 }
 

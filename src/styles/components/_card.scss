@@ -14,4 +14,22 @@
         border: 0;
     }
   }
+
+  &_vision {
+
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+
+    &:hover {
+      transform: translateY(-0.5rem) scale(1.0125);
+      box-shadow: 0 0.5em 3rem -1rem #63D471;
+    }
+
+    &:hover .card_arrow {
+      transform: translatex(16px);
+    }
+  }
+
+  &_arrow {
+    transition: all 0.3s ease-in-out;
+  }
 }

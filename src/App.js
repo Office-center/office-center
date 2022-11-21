@@ -51,7 +51,7 @@ function App() {
             </Link>
           </div>
 
-          <ul className='hidden md:flex items-center text-[20px]'>
+          <ul className='hidden md:flex items-center text-[16px]'>
             <Link to="#accueil" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-black' smooth>Accueil</Link>
             <Link to="#vision" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-black' smooth>Vision</Link>
             <Link to="#tarif" className='p-4 font-light cursor-pointer hover:text-secondaire duration-300 text-black' smooth>Tarifs</Link>
@@ -61,7 +61,7 @@ function App() {
               {nav ? <AiOutlineClose size={20}  className="text-white"/> : <AiOutlineMenu size={20} className="text-white"/>}
           </div>
           <div className={nav ? 'fixed left-0 top-[68px] w-[100%] h-full der-r-gray-100 ease-in-out duration-300' : 'ease-in-out duration-300 fixed left-[-100%] top-[68px]'} id="sidebar">
-            <div className='flex flex-col text-[20px] bg-secondairecard/75'>
+            <div className='flex flex-col text-[16px] bg-secondairecard/75'>
               <Link to="#accueil" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300 text-black' smooth>Accueil</Link>
               <Link to="#vision" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300 text-black' smooth>Vision</Link>
               <Link to="#tarif" className='p-4 border-b border-gray-300 cursor-pointer hover:text-secondaire duration-300 text-black' smooth>Tarifs</Link>
@@ -72,7 +72,7 @@ function App() {
         <div className='main'>
           <div className='flex justify-center items-center'>
             <video alt="Gare Lille Flandres, Grand Place de Lille" src={video} autoPlay loop muted className="w-[100vw] h-auto max-h-[75vh] min-h-[400px] object-cover blur-[0.2rem]" id='accueil' />
-            <h1 className="bg-secondairecard/70 absolute text-sm text-title text-center flex flex-col gap-y-[16px] p-4 rounded-md"><span className="text-[30px] title-bold">WORKUNION</span> <span>COWORKING - DOMICILIATION - LOCATION</span></h1>
+            <h1 className="bg-secondairecard/70 absolute text-sm text-black text-center flex flex-col gap-y-[16px] p-4 rounded-md"><span className="text-[30px] title-bold">WORKUNION</span> <span>COWORKING - DOMICILIATION - LOCATION</span></h1>
           </div>
           <Specialites />
           <Vision />
