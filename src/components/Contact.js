@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { AiOutlineLinkedin } from 'react-icons/ai';
 
 const Contact = () => {
 
@@ -73,23 +72,23 @@ const Contact = () => {
                 <div> 
                     
                 </div>
-                <div className="rounded-xl flex justify-center">
+                <div className={`rounded-xl flex justify-center relative${!Object.keys(formErr).length  ? '' : ' shake' }`}>
                     <form method="POST" action="https://getform.io/f/9c292022-0df0-4366-aeb8-3f4fbaa9922c" className="p-4 w-10/12 bg-white rounded-2xl shadow-lg max-w-2xl" id="contact" onSubmit={handleSubmit}>
                         <h2 className="text-3xl p-4 text-center text-secondaire">Envoyer un message</h2>
                         <div className="flex flex-col p-3">
                             <input aria-label="Entrer votre nom" aria-required="true" className="h-10 p-4 text-sm font-light placeholder-titresecondaire outline-none border-b-2 border-gray-300 focus:border-principal" placeholder="Nom*" type="text" name="Nom" onChange={handleChange} />
-                            <p className="text-error text-xs ml-4 mt-1">{formErr.name}</p>
+                            {formErr.name != null ? <p className="text-error text-xs ml-4 mt-1">{formErr.name}</p> : null }
                         </div>
                         <div className="flex flex-col p-3">
                             <input aria-label="Entrer votre prénom" aria-required="true" className="h-10 p-4 text-sm font-light placeholder-titresecondaire outline-none border-b-2 border-gray-300 focus:border-principal" placeholder="Email*" type="text" name="Email" onChange={handleChange} />
-                            <p className="text-error text-xs ml-4 mt-1">{formErr.email}</p>
+                            {formErr.email != null ? <p className="text-error text-xs ml-4 mt-1">{formErr.email}</p> : null }
                         </div>
                         <div className="flex flex-col p-3">
                             <input aria-label="Entrer votre email" aria-required="true" className="h-10 p-4 text-sm font-light placeholder-titresecondaire outline-none border-b-2 border-gray-300 focus:border-principal" placeholder="Sujet" type="text" name="Sujet" onChange={handleChange} />
                         </div>
                         <div className="w-full p-3">
                             <textarea aria-label="Entrer votre message" aria-required="true" className="h-[200px] w-full p-4 text-sm font-light text-left placeholder-titresecondaire resize-none outline-none border-b-2 border-gray-300 focus:border-principal" placeholder="Message*" name="Message" onChange={handleChange} />
-                            <p className="text-error text-xs ml-4 mt-1">{formErr.message}</p>
+                            {formErr.message != null ? <p className="text-error text-xs ml-4 mt-1">{formErr.message}</p> : null }
                         </div>
                         <input type="submit" className="p-2 w-1/3 ml-3 mt-2 rounded-full text-sm text-center text-white bg-principal hover:bg-white hover:text-principal duration-300 cursor-pointer" value="Envoyer" />
                         <ToastContainer

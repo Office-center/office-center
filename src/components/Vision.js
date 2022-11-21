@@ -52,7 +52,7 @@ const Vision = () => {
                 WorkUnion est une société nouvelle qui développe un concept original de centre d'affaires associant la domiciliation d'entreprise, la location de bureaux et le coworking dans un cadre de partage d'expérience et avec un rapport coût/service lowcost.
                 WorkUnion a pour objectif d'accompagner l'entreprise à sa création et durant les différentes étapes de son développement .
             </p>
-            <h3 className="text-secondaire pb-12 text-center text-principal px-[10px]">Les moyens WorkUnion mis à la disposition de ses adhérents sont les suivants :</h3>
+            <h3 className="text-secondaire pb-12 text-center text-principal px-[10px]">Les moyens que WorkUnion met a la disposition de ses adhérents :</h3>
 
             <div className="grid md:grid-cols-3 gap-10  p-4">
                 {cards.map(({id, imgSrc, imgAlt, title, list })=>

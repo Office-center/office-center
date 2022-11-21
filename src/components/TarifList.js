@@ -12,7 +12,7 @@ const TarifList = ({ data }) => {
             {data.list.length === 0 ?
                 <p className="text-white">Pour 7.99€ HT/mois, en complément d'une des formules de domiciliation présentées ci-dessus, obtenez 1/2 journée de mise à disposition d'un bureau équipé spécialisé (sur prise de rendez-vous).</p>
                 :
-                <ul className="list-disc text-base list-inside text-left text-white px-4 py-2">
+                <ul className="list-disc text-base list-outside text-left text-white px-4 py-2 ml-[12px]">
                     <li className="pb-3">{data.list[0]}</li>
                     <li className="pb-3">{data.list[1]}</li>
                     <li className="pb-3">{data.list[2]}</li>

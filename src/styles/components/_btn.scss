@@ -26,4 +26,13 @@
       color: rgb(0, 0, 0);
     }
   }
+
+  &_tarif {
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $secondaire;
+      color: white;
+    }
+  }
 }

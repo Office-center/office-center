@@ -54,28 +54,28 @@ const Tarif = () => {
             <h2 className="pb-4 text-center text-3xl text-secondaire">Nos tarifs</h2>
             <div className="grid md:grid-cols-2 gap-10 py-12 rounded-xl justify-center items-center">
                 <div className="flex flex-col justify-center items-center w-12/12">
-                    <button onClick={function(event){ handleClick(event); list(0);}} key={1} id="1" className={active === "1" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl mb-2" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white mb-2"}>
+                    <button onClick={function(event){ handleClick(event); list(0);}} key={1} id="1" className={`${active === "1" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl mb-2" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl mb-2 btn_tarif"}`}>
                         <div className="flex flex-row justify-between w-full">
                             <h3 className="text-left">Domiciliation simple</h3>
                             <h3>35€ HT /mois</h3>
                         </div>
                     </button>
 
-                    <button onClick={function(event){ handleClick(event); list(1);}} key={2} id="2" className={active === "2" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl mb-2" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white mb-2"}>
+                    <button onClick={function(event){ handleClick(event); list(1);}} key={2} id="2" className={active === "2" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl mb-2" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl btn_tarif mb-2"}>
                         <div className="flex flex-row justify-between w-full">
                             <h3 className="text-left">Domiciliation avec réexpédition</h3>
                             <h3>40€ HT /mois</h3>
                         </div>
                     </button>
 
-                    <button onClick={function(event){ handleClick(event); list(2);}} key={3} id="3" className={active === "3" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl mb-2" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white mb-2"}>
+                    <button onClick={function(event){ handleClick(event); list(2);}} key={3} id="3" className={active === "3" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl mb-2" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl btn_tarif mb-2"}>
                         <div className="flex flex-row justify-between w-full">
                             <h3 className="text-left">Domiciliation avec retranscription</h3>
                             <h3>45€ HT /mois</h3>
                         </div>
                     </button>
 
-                    <button onClick={function(event){ handleClick(event); list(3);}} key={4} id="4" className={active === "4" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl hover:bg-secondaire hover:text-white"}>
+                    <button onClick={function(event){ handleClick(event); list(3);}} key={4} id="4" className={active === "4" ? "flex w-11/12 px-7 py-4 bg-secondaire text-white rounded-xl" : "flex w-11/12 px-7 py-4 bg-white text-secondaire rounded-xl btn_tarif"}>
                         <div className="flex flex-row justify-between w-full">
                             <h3 className="text-left">Option</h3>
                             <h3>7.99€ HT /mois</h3>
