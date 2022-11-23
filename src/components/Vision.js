@@ -62,34 +62,36 @@ const Vision = () => {
         développement .
       </p>
       <h3 className="text-secondaire pb-12 text-center text-principal px-[10px]">
-        Les moyens que WorkUnion met a la disposition de ses adhérents :
+        Les moyens que WorkUnion met à la disposition de ses adhérents :
       </h3>
 
       <div className="grid md:grid-cols-3 gap-10  p-4">
         {cards.map(({ id, imgSrc, imgAlt, title, list }) => (
-          <div
-            className="max-w-sm overflow-hidden shadow-lg shadow-slate-400 shadow-principal rounded-[10px] bg-white card_vision relative"
-            key={id}
-          >
-            <img
-              className="object-cover h-48 w-96 bg-principal"
-              src={imgSrc}
-              alt={imgAlt}
-            />
-            <div className="px-6 py-4">
-              <div className="text-base mb-2 text-center">{title}</div>
-              <ul className="list-disc text-sm list-outside text-left">
-                {list.map((item, index) => (
-                  <li key={index} className="">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="absolute right-[26px] bottom-0 card_arrow">
-                <RiArrowRightSLine size={30} />
+            <div
+              className="max-w-sm overflow-hidden shadow-lg shadow-slate-400 shadow-principal rounded-[10px] bg-white card_vision relative"
+              key={id}
+            >
+              <a href="/construction">
+              <img
+                className="object-cover h-48 w-96 bg-principal"
+                src={imgSrc}
+                alt={imgAlt}
+              />
+              <div className="px-6 py-4">
+                <div className="text-base mb-2 text-center">{title}</div>
+                <ul className="list-disc text-sm list-outside text-left">
+                  {list.map((item, index) => (
+                    <li key={index} className="">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="absolute right-[26px] bottom-0 card_arrow">
+                  <RiArrowRightSLine size={30} />
+                </div>
               </div>
+              </a>
             </div>
-          </div>
         ))}
         <div id="tarif"></div>
       </div>

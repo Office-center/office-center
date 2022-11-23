@@ -35,4 +35,19 @@
       color: white;
     }
   }
+
+  &-error {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 50%, rgb(255, 255, 255) 50%);
+    background-position: right;
+    background-size: 200% 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+
+    &:hover {
+      background-position: left;
+      color: rgb(0, 0, 0);
+    }
+  }
 }
