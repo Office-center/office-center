@@ -1,11 +1,11 @@
-import Specialites from "./components/Specialites";
-import Vision from "./components/Vision";
-import Tarif from "./components/Tarif";
-import Contact from "./components/Contact";
+import Specialites from "./components/racine/Specialites";
+import Vision from "./components/racine/Vision";
+import Tarif from "./components/racine/Tarif";
+import Contact from "./components/racine/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Promo from "./components/Promo";
-import VidPres from "./components/vidPres";
+import Promo from "./components/racine/Promo";
+import VidPres from "./components/racine/vidPres";
 
 const one_page = () => {
   return (

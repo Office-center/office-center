@@ -1,7 +1,7 @@
 import React from "react";
-import image1 from "../assets/image1.jpeg";
-import image2 from "../assets/image2.jpeg";
-import image3 from "../assets/image3.jpeg";
+import image1 from "../../assets/image1.jpeg";
+import image2 from "../../assets/image2.jpeg";
+import image3 from "../../assets/image3.jpeg";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const Vision = () => {
@@ -55,11 +55,11 @@ const Vision = () => {
       </h2>
       <p className="max-w-[800px] pb-10 w-auto text-white text-center sm:px-5 text-sm">
         WorkUnion est une société nouvelle qui développe un concept original de
-        centre d'affaires associant la domiciliation d'entreprise, la location
-        de bureaux et le coworking dans un cadre de partage d'expérience et avec
-        un rapport coût/service lowcost. WorkUnion a pour objectif d'accompagner
-        l'entreprise à sa création et durant les différentes étapes de son
-        développement .
+        centre d'affaires associant la domiciliation d'entreprise, la mise à
+        disposition de bureaux et le coworking dans un cadre de partage
+        d'expérience et avec un rapport coût/service lowcost. WorkUnion a pour
+        objectif d'accompagner l'entreprise à sa création et durant les
+        différentes étapes de son développement .
       </p>
       <h3 className="text-secondaire pb-12 text-center text-principal px-[10px]">
         Les moyens que WorkUnion met à la disposition de ses adhérents :
@@ -67,11 +67,11 @@ const Vision = () => {
 
       <div className="grid md:grid-cols-3 gap-10  p-4">
         {cards.map(({ id, imgSrc, imgAlt, title, list }) => (
-            <div
-              className="max-w-sm overflow-hidden shadow-lg shadow-slate-400 shadow-principal rounded-[10px] bg-white card_vision relative"
-              key={id}
-            >
-              <a href="/construction">
+          <div
+            className="max-w-sm overflow-hidden shadow-lg shadow-slate-400 shadow-principal rounded-[10px] bg-white card_vision relative"
+            key={id}
+          >
+            <a href="/construction">
               <img
                 className="object-cover h-48 w-96 bg-principal"
                 src={imgSrc}
@@ -90,8 +90,8 @@ const Vision = () => {
                   <RiArrowRightSLine size={30} />
                 </div>
               </div>
-              </a>
-            </div>
+            </a>
+          </div>
         ))}
         <div id="tarif"></div>
       </div>

@@ -3,7 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import logo from "../assets/terre.jpg";
 import React, { useState, useEffect } from "react";
 
-const Header = ({ myRef }) => {
+const Header = ({ myRef, bgDark }) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -31,7 +31,7 @@ const Header = ({ myRef }) => {
   return (
     <header ref={myRef}
       aria-label="barre de navigation"
-      className="z-50 w-full py-2 flex justify-between fixed h-auto p-8 md:px-44 bg-secondairecard/75 top-0 left-0"
+      className={`z-50 w-full py-2 flex justify-between fixed h-auto p-8 md:px-44 top-0 left-0${ bgDark ? " bg-gray/70" : " bg-secondairecard/75" }`}
     >
       <div className="flex justify-start items-center">
         <Link to="/" className="pr-4">

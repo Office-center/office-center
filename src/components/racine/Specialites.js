@@ -16,7 +16,7 @@ const Specialites = () => {
     {
         id : 1,
         icon : <BiBuildingHouse size={45} />,
-        title : 'LOCATION DE BUREAUX',
+        title : 'MISE À DISPOSITION DE BUREAUX',
         text : 'Situé à deux pas de la gare Lille Flandres et de la Grand Place de Lille, offrez à votre entreprise une adresse exceptionnelle'
     },
     {
