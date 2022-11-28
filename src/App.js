@@ -10,8 +10,8 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/" element={<OP />} />
-        <Route path="/construction" element={<Construction />} />
-        <Route path='/reparation' element={<Promo />} />
+        <Route exact path="/construction" element={<Construction />} />
+        <Route exact path="/reparation" element={<Promo />} />
         <Route path="/*" element={<Error />} />
       </Routes>
     </Router>
