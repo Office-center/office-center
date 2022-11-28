@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Promo from "./components/racine/Promo";
 import VidPres from "./components/racine/vidPres";
+import OtherEnt from "./components/racine/OtherEnt";
 
 const one_page = () => {
   return (
@@ -16,7 +17,7 @@ const one_page = () => {
         <Specialites />
         <Vision />
         <Tarif />
-        <Promo />
+        <OtherEnt />
         <Contact />
       </main>
       <Footer />

@@ -1,7 +1,8 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useRef, useEffect } from "react";
-import Accueil from "./components/reparation/AccueilPromo";
+import Accueil from "./components/reparation/Accueil";
+import Card from './components/reparation/Card';
 
 const Promo = () => {
   const headerRef = useRef(null);
@@ -28,6 +29,7 @@ const Promo = () => {
       <Header myRef={headerRef} bgDark />
       <main ref={mainRef}>
         <Accueil />
+        <Card />
       </main>
       <Footer myRef={footerRef} bgDark />
     </div>

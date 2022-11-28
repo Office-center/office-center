@@ -67,11 +67,7 @@ const Vision = () => {
 
       <div className="grid md:grid-cols-3 gap-10  p-4">
         {cards.map(({ id, imgSrc, imgAlt, title, list }) => (
-          <div
-            className="max-w-sm overflow-hidden shadow-lg shadow-slate-400 shadow-principal rounded-[10px] bg-white card_vision relative"
-            key={id}
-          >
-            <a href="/construction">
+            <a href="/construction" className="max-w-sm overflow-hidden shadow-lg shadow-slate-400 shadow-principal rounded-[10px] bg-white card_vision relative" key={id}>
               <img
                 className="object-cover h-48 w-96 bg-principal"
                 src={imgSrc}
@@ -91,7 +87,6 @@ const Vision = () => {
                 </div>
               </div>
             </a>
-          </div>
         ))}
         <div id="tarif"></div>
       </div>

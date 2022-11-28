@@ -32,4 +32,21 @@
   &_arrow {
     transition: all 0.3s ease-in-out;
   }
+
+  &-ent, &-content {
+    transition: all 0.5s;
+  }
+
+  &-wrap {
+    transition: all 0.5s;
+
+    &:hover {
+      // filter: blur(3px);
+
+      .card-content {
+        top: 0;
+      }
+    }
+  }
+
 }
