@@ -15,7 +15,7 @@ const vidPres = () => {
       <h1 className="bg-white/70 absolute text-sm text-secondaire text-center flex flex-col gap-y-[16px] p-[24px] rounded-md">
         <span className="text-[34px] title-bold">WORKUNION</span>{" "}
         <span className="text-[18px]">
-          COWORKING - DOMICILIATION - LOCATION
+          COWORKING - DOMICILIATION - PRESTATIONS AUX ENTREPRISES
         </span>
       </h1>
     </div>

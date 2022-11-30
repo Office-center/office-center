@@ -23,13 +23,13 @@ const Contact = () => {
     setIsSubmit(true);
   };
 
-  var bodyFormData = new FormData();
-  bodyFormData.append("Nom", formValue.Nom);
-  bodyFormData.append("Email", formValue.Email);
-  bodyFormData.append("Message", formValue.Message);
-
+  
   useEffect(() => {
     if (Object.keys(formErr).length === 0 && isSubmit) {
+      var bodyFormData = new FormData();
+      bodyFormData.append("Nom", formValue.Nom);
+      bodyFormData.append("Email", formValue.Email);
+      bodyFormData.append("Message", formValue.Message);
       axios({
         method: "post",
         url: "https://getform.io/f/9c292022-0df0-4366-aeb8-3f4fbaa9922c",
@@ -38,9 +38,11 @@ const Contact = () => {
       })
         .then(function (response) {
           success();
+          bodyFormData = initialValue;
         })
         .catch(function (response) {
           error();
+          bodyFormData = initialValue;
         });
     }
   }, [formErr]);
@@ -108,7 +110,7 @@ const Contact = () => {
                   aria-required="true"
                   className="h-10 p-4 text-sm font-light placeholder-titresecondaire outline-none border-b-2 border-gray-300 focus:border-principal"
                   placeholder="Email*"
-                  type="text"
+                  type="email"
                   name="Email"
                   onChange={handleChange}
                 />

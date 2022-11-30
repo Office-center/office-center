@@ -46,7 +46,7 @@ const OtherEnt = () => {
                 className="md:w-[50%] relative overflow-hidden card-wrap rounded-lg"
                 key={id}
               >
-                <div className="w-[100%] h-[25vh] flex flex-col justify-center items-center duration-500 grayscale hover:grayscale-0 card-ent">
+                <div className="w-[100%] py-[25px] flex flex-col justify-center items-center duration-500 grayscale hover:grayscale-0 card-ent">
                   <img
                     src={imgBg}
                     className="absolute object-cover w-[100%] h-[100%]"
