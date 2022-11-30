@@ -1,5 +1,4 @@
 .card {
-
   &-spe {
     color: $secondaire;
   }
@@ -9,19 +8,17 @@
   }
 
   &-item {
-
     &:last-of-type {
-        border: 0;
+      border: 0;
     }
   }
 
   &_vision {
-
     transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 
     &:hover {
       transform: translateY(-0.5rem) scale(1.0125);
-      box-shadow: 0 0.5em 3rem -1rem #63D471;
+      box-shadow: 0 0.5em 3rem -1rem #63d471;
     }
 
     &:hover .card_arrow {
@@ -33,8 +30,13 @@
     transition: all 0.3s ease-in-out;
   }
 
-  &-ent, &-content {
+  &-ent,
+  &-content {
     transition: all 0.5s;
+
+    @include responsive(l) {
+      filter: grayscale(1);
+    }
   }
 
   &-wrap {
@@ -48,5 +50,4 @@
       }
     }
   }
-
 }
