@@ -33,7 +33,6 @@ const OtherEnt = () => {
           <h3 className="sm:text-[24px] text-3xl text-white">WorkUnion c'est aussi :</h3>
         </div>
         <div className="flex flex-raw justify-center items-center justify-around">
-<<<<<<< HEAD
           {pres.map(
             ({ id, imgBg, imgIco, imgAlt, icoAlt, bgAlt, title, desc }) => (
               <a
@@ -59,19 +58,6 @@ const OtherEnt = () => {
               </a>
             )
           )}
-=======
-          {pres.map(({ id, imgBg, imgIco, imgAlt, icoAlt, bgAlt, title, desc }) => (
-            <a href="/construction" className="md:w-[50%] relative overflow-hidden card-wrap rounded-lg" key={id}>
-              <div className="w-[100%] h-[25vh] flex flex-col justify-center items-center duration-500 hover:grayscale-0 card-ent py-[20px]">
-                <img src={imgBg} className="absolute object-cover w-[100%] h-[100%]" alt={bgAlt} />
-                <img src={imgIco} alt={icoAlt} className={`rounded-full relative object-cover bg-black${id === 7 ? " sm:h-18 sm:w-18 md:h-[150px] md:w-[150px]" : " sm:h-14 sm:w-14 md:h-[100px] md:w-[100px]"}`} />
-                <h4 className="relative pt-[4%] text-center text-white px-[10px]">{title}</h4>
-                <p className="relative text-center text-white px-[10px]">{desc}</p>
-              </div>
-              {/* <div className="h-[100%] w-[100%] top-[100%] absolute bg-white/50 card-content"></div> */}
-            </a>
-          ))}
->>>>>>> 54be50bff3ba2cc5adeb382763b1d97abe7c25f9
         </div>
       </div>
     </>
